@@ -88,11 +88,11 @@ public class Serdes {
         }
     }
 
-    static public final class StringSerde extends WrapperSerde<String> {
+  /*  static public final class StringSerde extends WrapperSerde<String> {
         public StringSerde() {
             super(new StringSerializer(), new StringDeserializer());
         }
-    }
+    }*/
 
     static public final class ByteBufferSerde extends WrapperSerde<ByteBuffer> {
         public ByteBufferSerde() {
@@ -114,9 +114,9 @@ public class Serdes {
 
     @SuppressWarnings("unchecked")
     static public <T> Serde<T> serdeFrom(Class<T> type) {
-        if (String.class.isAssignableFrom(type)) {
+       /* if (String.class.isAssignableFrom(type)) {
             return (Serde<T>) String();
-        }
+        }*/
 
         if (Short.class.isAssignableFrom(type)) {
             return (Serde<T>) Short();
@@ -210,9 +210,9 @@ public class Serdes {
     /*
      * A serde for nullable {@code String} type.
      */
-    static public Serde<String> String() {
+   /* static public Serde<String> String() {
         return new StringSerde();
-    }
+    }*/
 
     /*
      * A serde for nullable {@code ByteBuffer} type.
