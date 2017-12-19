@@ -2,6 +2,9 @@ package org.apache.kafka.common.enddec;
 
 import java.util.Map;
 
+/**
+ * Factory for creating encrypters/decrypters
+ */
 public class Endecs {
 
     static protected class WrapperEndecs<T> implements Endec<T> {
@@ -30,15 +33,7 @@ public class Endecs {
 
         }
 
-        @Override
-        public Serializer<T> serializer() {
-            return null;
-        }
 
-        @Override
-        public Deserializer<T> deserializer() {
-            return null;
-        }
 
         @Override
         public void close() {
